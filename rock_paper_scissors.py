@@ -22,7 +22,26 @@ def user_choice():
 def determine_winner(c, u):
      if c==u:
         return "Tie"
-     elif (c== "Rock" and u=="Paper") or (c=="Paper" and u==("Scissors") or (c=="Scissors" and u=="Rock"))
+     elif (c== "Rock" and u=="Paper") or (c=="Paper" and u==("Scissors") or (c=="Scissors" and u=="Rock")):
+         return "user"
      else:
        return "pc"
-        
+
+def results(winner, c, u):
+    print("You chose ", u)
+    print("The computer chose", c)
+    if winner == "user":
+        print("You win")
+    elif winner == "pc":
+        print("The computa won!")
+    else:
+        print("It's a tie play again! \n")
+
+
+
+def main ():
+    c_choice=computer_choice()
+    u_choice=user_choice()
+    winner=determine_winner(c_choice, u_choice)
+    results(winner, c_choice, u_choice)
+main()
