@@ -16,8 +16,8 @@ def days_absent(num_employees):
         days=int(input(f"Days missed by employee{i}:"))
         while days < 0:
             days=int(input("Error, Please enter an amount {i}:"))
-            total+=days
-        return total
+        total+=days
+    return total
 
 def average_day(num_employees, total_days):
     return total_days / num_employees
